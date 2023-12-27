@@ -25,13 +25,38 @@
 
   <script>
     // JSON data with article information
-    const articles = [
+  /*  const articles = [
       {
         "title": "How to Create Pivot Tables in Excel",
         "content": "Pivot tables in Excel help summarize and analyze large data sets efficiently. To create a pivot table, select your data range, go to the 'Insert' tab, click on 'PivotTable,' choose the data range, and place the pivot table in a new or existing worksheet."
       },
       // Add more articles in the same format
     ];
+*/
+  
+const articles = [
+  {
+    "title": "Azure Machine Learning Studio",
+    "content": "Azure Machine Learning Studio serves as a robust platform for building, testing, and deploying machine learning models. Its standout feature lies in its user-friendly, drag-and-drop interface that simplifies the entire machine learning workflow. This visual approach significantly reduces the entry barrier for those new to machine learning, allowing users without extensive coding knowledge to create and experiment with models effectively. Moreover, Azure ML Studio offers a wide array of algorithms and tools, empowering users to preprocess data, select models, and tune hyperparameters seamlessly.\n\nComparison with AWS & Google Cloud:\nWhile AWS SageMaker and Google Cloud AI Platform provide similar functionalities, they tend to cater more to developers comfortable with coding and scripting. Azure ML Studio's strength lies in its accessibility and ease of use, making it an attractive choice for beginners and non-programmers diving into machine learning. Additionally, Azure's integration with other Microsoft services, such as Power BI and Azure SQL Database, provides a seamless ecosystem for data handling and analysis."
+  },
+  {
+    "title": "Azure Cognitive Services",
+    "content": "Azure Cognitive Services offers an extensive suite of pre-built AI models and APIs for various tasks such as vision, speech, language understanding, and decision-making. This range of services empowers developers to integrate AI capabilities effortlessly into their applications, enhancing user experiences. Azure's Cognitive Services APIs, including Computer Vision, Speech, Language Understanding, and Decision, cover a broad spectrum of AI functionalities, providing flexibility for diverse application needs.\n\nComparison with AWS & Google Cloud:\nAWS offers Rekognition and Polly, while Google Cloud provides Vision AI and Speech-to-Text API, which provide similar functionalities to Azure Cognitive Services. However, Azure Cognitive Services stand out due to its comprehensive range of APIs, addressing a broader spectrum of AI requirements compared to its competitors. Furthermore, Azure's familiarity with developers due to its consistent tooling and ease of integration with other Microsoft services adds an advantage."
+  },
+  {
+    "title": "Azure Bot Service",
+    "content": "Azure Bot Service simplifies the creation of intelligent bots across multiple platforms. Leveraging the Microsoft Bot Framework, developers can build sophisticated bots with natural language processing capabilities. These bots can be easily integrated into various applications, messaging platforms, and customer service scenarios, allowing for seamless interactions between users and applications.\n\nComparison with AWS & Google Cloud:\nAWS provides Lex, and Google Cloud offers Dialogflow for similar bot creation purposes. However, Azure Bot Service's integration with the Microsoft Bot Framework provides a more seamless development and deployment experience, especially for developers already working within Microsoft's ecosystem. The Bot Service simplifies the bot-building process, offering a wide range of templates, language understanding, and integration capabilities, making it an attractive option for enterprises invested in Microsoft technologies."
+  },
+  {
+    "title": "Azure Cognitive Search",
+    "content": "Azure Cognitive Search enables developers to implement powerful search capabilities within their applications. Its features include AI-driven indexing, semantic search, and natural language processing, allowing users to explore information efficiently within vast datasets. Azure Cognitive Search supports diverse data types and sources, providing flexibility in handling structured and unstructured data.\n\nComparison with AWS & Google Cloud:\nWhile AWS and Google Cloud offer search services, Azure Cognitive Search emphasizes AI-driven indexing and semantic search capabilities. Its focus on understanding user queries and providing relevant results distinguishes it for businesses seeking advanced search functionalities. Additionally, Azure's seamless integration with other Azure services facilitates streamlined workflows for developers building comprehensive applications."
+  },
+  {
+    "title": "Azure Translator",
+    "content": "Azure Translator offers robust translation capabilities for both text and speech across multiple languages. Its key strengths lie in its real-time translation capabilities and the ability to seamlessly integrate translation services into applications, promoting global communication.\n\nComparison with AWS & Google Cloud:\nBoth AWS and Google Cloud offer translation services with similar functionalities. Azure Translator, however, emphasizes real-time translation and integration, making it a suitable choice for applications where instantaneous and accurate translation is crucial. Additionally, Azure's consistent performance and integration capabilities across other Azure services provide developers with a comprehensive ecosystem for building multilingual applications."
+  }
+  // Add more articles in the same format if needed
+];
 
     // Function to create article links and display content
     function showArticle(index) {
