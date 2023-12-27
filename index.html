@@ -1,1 +1,67 @@
-index
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Excel How-To Articles</title>
+  <style>
+    /* Style for the articles */
+    .article {
+      display: none;
+      margin-bottom: 20px;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Microsoft Excel How-To Articles</h1>
+  
+  <!-- Links to articles -->
+  <div id="links"></div>
+
+  <!-- Content of articles -->
+  <div id="content"></div>
+
+  <script>
+    // JSON data with article information
+    const articles = [
+      {
+        "title": "How to Create Pivot Tables in Excel",
+        "content": "Pivot tables in Excel help summarize and analyze large data sets efficiently. To create a pivot table, select your data range, go to the 'Insert' tab, click on 'PivotTable,' choose the data range, and place the pivot table in a new or existing worksheet."
+      },
+      // Add more articles in the same format
+    ];
+
+    // Function to create article links and display content
+    function showArticle(index) {
+      const contentDiv = document.getElementById('content');
+      contentDiv.innerHTML = `<div class="article">${articles[index].content}</div>`;
+    }
+
+    // Function to create links to articles
+    function createLinks() {
+      const linksDiv = document.getElementById('links');
+      articles.forEach((article, index) => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.textContent = article.title;
+        link.addEventListener('click', () => {
+          showArticle(index);
+          // Remove 'active' class from all articles
+          const allArticles = document.querySelectorAll('.article');
+          allArticles.forEach(article => article.classList.remove('active'));
+          // Add 'active' class to the displayed article
+          const activeArticle = document.querySelector('.article');
+          activeArticle.classList.add('active');
+        });
+        linksDiv.appendChild(link);
+        linksDiv.appendChild(document.createElement('br')); // For spacing between links
+      });
+    }
+
+    // Call the function to create links when the page loads
+    window.onload = createLinks;
+  </script>
+</body>
+</html>
